@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFS CyberForgeSecurity </title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CFS CyberForgeSecurity is a boutique offensive security firm. We provide manual penetration testing, API vulnerability reviews, cloud posture audits, and targeted red team simulations.">
+    <meta name="keywords" content="penetration testing, security audit, red team, exploit development, cloud security, API security, vulnerability assessment">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="CFS CyberForgeSecurity">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://secureforge.tech/">
+    <meta property="og:title" content="CFS CyberForgeSecurity ">
+    <meta property="og:description" content="Forget automated scans. We provide manual, intelligence-led offensive security for teams that care about real risk.">
+    <meta property="og:image" content="https://secureforge.tech/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://secureforge.tech/">
+    <meta property="twitter:title" content="CFS CyberForgeSecurity | Bespoke Penetration Testing & Offensive Security">
+    <meta property="twitter:description" content="Forget automated scans. We provide manual, intelligence-led offensive security for teams that care about real risk.">
+    <meta property="twitter:image" content="https://secureforge.tech/assets/og-image.png">
+
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Centralized Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+    "name": "CFS CyberForgeSecurity",
+      "image": "https://secureforge.tech/assets/og-image.png",
+      "@id": "https://secureforge.tech/#organization",
+      "url": "https://secureforge.tech/",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "London",
+        "postalCode": "",
+        "addressCountry": "GB"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://twitter.com/secureforge"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="glow-orb top"></div>
+    <div class="glow-orb bottom"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><div class="logo-dot"></div> CFS CyberForgeSecurity</a>
+                <div class="nav-links">
+                    <a href="#expertise">Expertise</a>
+                    <a href="#engagement">Engagement Models</a>
+                    <a href="#firm">Our Firm</a>
+                    <a href="blog.html">Briefings</a>
+                </div>
+                <a href="#contact" class="btn btn-primary" id="desktop-nav-btn">Start a Conversation</a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <a href="#expertise" class="mobile-link">Expertise</a>
+        <a href="#engagement" class="mobile-link">Engagement Models</a>
+        <a href="#firm" class="mobile-link">Our Firm</a>
+        <a href="blog.html" class="mobile-link">Briefings</a>
+        <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem;">Start a Conversation</a>
+            <button class="mobile-nav-close" id="mobile-close" aria-label="Close navigation">×</button>
+    </div>
+
+    <div class="container">
+
+        <!-- No-BS Hero Section -->
+        <div class="hero">
+            <div class="status-badge">
+                <div class="pulse-dot"></div> Accepting new clients for Q3
+            </div>
+            <h1>We break your systems <br>before <span class="highlight">they</span> do.</h1>
+            <p>Forget automated scans marketed as penetration tests. We are a boutique firm of former exploit developers providing deeply manual, intelligence-led offensive security for organizations that actually care about their risk.</p>
+            
+            <div class="hero-actions">
+                <a href="#engagement" class="btn btn-glow">View Engagement Models</a>
+                <span style="font-size: 0.9rem; color: var(--text-dark);">or scroll to learn more</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expertise / Services (Bento Grid) -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Capability Portfolio</h2>
+                <p>We don't do everything. We specialize in complex environments where out-of-the-box tooling fails.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Large Featured -->
+                <div class="bento-item span-2 row-2">
+                    <div class="item-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div>
+                        <h3>Application & API Security</h3>
+                        <p style="max-width: 400px; margin-bottom: 1rem;">Most breaches happen at the application layer. We perform white-box and black-box assessments on modern web apps, microservices, and GraphQL APIs. We hunt for intricate business logic flaws that automated tools physically cannot see.</p>
+                        <p style="max-width: 400px; color: var(--text-dark); font-size: 0.85rem;">Outputs include custom proof-of-concept exploits, video walkthroughs, and developer-centric remediation guidance.</p>
+                    </div>
+                </div>
+
+                <!-- Standard -->
+                <div class="bento-item">
+                    <div class="item-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <div>
+                        <h3>External Infrastructure</h3>
+                        <p>Mapping and exploiting your external attack surface. We identify shadow IT, forgotten staging environments, and misconfigured perimeters.</p>
+                    </div>
+                </div>
+
+                <div class="bento-item">
+                    <div class="item-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+                    </div>
+                    <div>
+                        <h3>Cloud Posture (AWS/GCP/Azure)</h3>
+                        <p>Deep configuration audits of your cloud environments to prevent IAM privilege escalation, SSRF bridging, and data exfiltration.</p>
+                    </div>
+                </div>
+
+                <!-- Wide -->
+                <div class="bento-item span-2">
+                    <div class="item-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3>Targeted Red Teaming</h3>
+                        <p>We simulate specific threat actors targeting your organization. From spear-phishing your engineering team to bypassing your EDR solutions, this is a full-scope assessment designed to test your Blue Team's detection and response capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-item">
+                    <div class="item-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <div>
+                        <h3>Mobile Application</h3>
+                        <p>Reverse engineering iOS/Android binaries, bypassing SSL pinning, and identifying insecure local storage.</p>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <div class="item-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2Z"></path><path d="M12 7v5l3 3"></path></svg>
+                    </div>
+                    <div>
+                        <h3>Spyware & Persistence Emulation</h3>
+                        <p>Simulate advanced covert implants and persistence mechanisms to validate endpoint detection, incident response, and telemetry coverage against real-world surveillance techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Engagement Models -->
+    <section id="engagement" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bespoke Scoping Engine</h2>
+                <p>Security isn't a commodity. Use our dynamic calculator to estimate the baseline scope for your next assessment, or toggle standard engagement models.</p>
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div class="pricing-toggle-wrapper" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3.5rem;">
+                <button class="btn btn-glow" id="btn-show-calc" style="padding: 0.6rem 1.4rem; font-size: 0.9rem;">Custom Scoping Engine</button>
+                <button class="btn" id="btn-show-plans" style="padding: 0.6rem 1.4rem; font-size: 0.9rem; border-color: var(--border); color: var(--text-white);">Standard Engagement Models</button>
+            </div>
+
+            <!-- Custom Scoping calculator container -->
+            <div class="pricing-layout" id="calculator-container">
+                <!-- Interactive Calculator (Left) -->
+                <div class="calculator-card">
+                    <h3 class="calc-title">Configure Assessment</h3>
+                    <p class="calc-subtitle">Select targets and depth to build a custom scoping package.</p>
+                    
+                    <div class="calc-section">
+                        <div class="calc-label">
+                            <span>Primary Targets (Applications / APIs)</span>
+                            <span class="val-display" id="target-count-display">1 Target</span>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" min="1" max="10" value="1" class="range-slider" id="target-slider">
+                        </div>
+                    </div>
+
+                    <div class="calc-section">
+                        <label class="calc-label">Asset Environments</label>
+                        <div class="target-grid">
+                            <button type="button" class="target-btn active" data-type="web-app">
+                                <div class="target-checkbox"></div>
+                                <span>Web App & APIs</span>
+                            </button>
+                            <button type="button" class="target-btn" data-type="mobile">
+                                <div class="target-checkbox"></div>
+                                <span>Mobile (iOS/Android)</span>
+                            </button>
+                            <button type="button" class="target-btn" data-type="cloud">
+                                <div class="target-checkbox"></div>
+                                <span>Cloud Configuration</span>
+                            </button>
+                            <button type="button" class="target-btn" data-type="network">
+                                <div class="target-checkbox"></div>
+                                <span>External Network IP Ranges</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="calc-section">
+                        <label class="calc-label">Assessment Depth</label>
+                        <div class="target-grid">
+                            <button type="button" class="target-btn active" data-depth="black-box">
+                                <div class="target-checkbox"></div>
+                                <span>Black-Box (External Analysis)</span>
+                            </button>
+                            <button type="button" class="target-btn" data-depth="white-box">
+                                <div class="target-checkbox"></div>
+                                <span>White-Box (Source Code Review)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="calc-section">
+                        <label class="calc-label">Enhanced Options</label>
+                        <div class="target-grid">
+                            <button type="button" class="target-btn" data-addon="red-team">
+                                <div class="target-checkbox"></div>
+                                <span>Targeted Red Teaming</span>
+                            </button>
+                            <button type="button" class="target-btn" data-addon="slack">
+                                <div class="target-checkbox"></div>
+                                <span>Dedicated Slack Support</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Scoped Pricing Details (Right) -->
+                <div class="calc-results">
+                    <h3>ESTIMATED BUDGET</h3>
+                    <div class="calc-price" id="calc-price-display">$6,000 <span>/ baseline scope</span></div>
+                    <p class="calc-desc" id="calc-desc-display">Ideal for early-stage startups needing a foundational assessment for passing basic compliance audits.</p>
+                    
+                    <ul class="calc-features" id="calc-features-list">
+                        <li>1 Target Application or API</li>
+                        <li>Manual OWASP Top 10 Testing</li>
+                        <li>Executive Summary & Technical Report</li>
+                        <li>1 Post-Fix Retest Window</li>
+                    </ul>
+
+                    <a href="mailto:hello@secureforge.tech?subject=Custom%20Scope%20Inquiry" class="btn btn-glow" id="calc-inquire-btn" style="width: 100%;">Inquire About This Scope</a>
+                </div>
+            </div>
+
+            <!-- Standard plans wrapper (initially hidden) -->
+            <div class="plans-wrapper" id="plans-container" style="display: none;">
+                <div class="plan">
+                    <div class="plan-name">Foundational Assessment</div>
+                    <div class="plan-price">$6k <span>/ starting</span></div>
+                    <p class="plan-desc">For early-stage startups needing to pass vendor security questionnaires or complete their first major compliance audit (SOC2/ISO).</p>
+                    <ul>
+                        <li>1 Target Application or API</li>
+                        <li>Manual OWASP Top 10 Testing</li>
+                        <li>Executive Summary & Tech Report</li>
+                        <li>1 Post-Fix Retest</li>
+                    </ul>
+                    <a href="mailto:hello@secureforge.tech" class="btn" style="border-color: var(--border); color: var(--text-white);">Inquire</a>
+                </div>
+
+                <div class="plan plan-featured">
+                    <div class="plan-name">Deep-Dive Pentest</div>
+                    <div class="plan-price">$14k <span>/ typical</span></div>
+                    <p class="plan-desc">Our most common engagement. A highly thorough, manual assessment of complex business logic and robust infrastructure.</p>
+                    <ul>
+                        <li>Complex Multi-Role Applications</li>
+                        <li>Source Code Review (White-box)</li>
+                        <li>Cloud Environment Audit</li>
+                        <li>Direct Slack Channel w/ Engineers</li>
+                        <li>Detailed Remediation Guidance</li>
+                    </ul>
+                    <a href="mailto:hello@secureforge.tech" class="btn btn-glow">Schedule Scoping Call</a>
+                </div>
+
+                <div class="plan">
+                    <div class="plan-name">Red Team / Continuous</div>
+                    <div class="plan-price">Custom</div>
+                    <p class="plan-desc">For mature security organizations looking to pressure-test their internal SOC and incident response playbooks.</p>
+                    <ul>
+                        <li>Custom Malware / Loaders</li>
+                        <li>Social Engineering Campaigns</li>
+                        <li>Physical Intrusion (Optional)</li>
+                        <li>Adversary Emulation</li>
+                    </ul>
+                    <a href="mailto:hello@secureforge.tech" class="btn" style="border-color: var(--border); color: var(--text-white);">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-Talk About Section -->
+    <section id="firm">
+        <div class="container">
+            <div class="story-section">
+                <div class="story-text">
+                    <h2 style="margin-bottom: 2rem;">Why we built CFS CyberForgeSecurity</h2>
+                    <p>Before starting this firm, our founders worked on both sides of the aisle: defending critical infrastructure and legally breaking into Fortune 500 networks. We constantly saw the same problem: the "penetration testing" industry had become a factory.</p>
+                    <p>Firms were sending junior analysts to run automated scanners, exporting a PDF, and charging $20,000. It provided a false sense of security.</p>
+                    <p>We created SecureForge to be different. We cap our engagements every quarter to ensure our senior engineers are never rushed. When you hire us, you get the people who actually write the exploits, not an automated script.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h4>100%</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-dark);">Manual Logic Testing</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>0</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-dark);">Junior Offshored Staff</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>70+</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-dark);">CVEs Discovered by Team</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>24h</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-dark);">SLA for Critical Findings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Word of Mouth / Testimonials -->
+    <section style="border-top: none; padding-top: 0;">
+        <div class="container">
+            <div class="testimonial-header">
+                <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">What CTOs are saying behind closed doors...</h3>
+                <div class="testimonial-nav">
+                    <button class="t-nav-btn" id="t-prev" aria-label="Previous Testimonial">←</button>
+                    <button class="t-nav-btn" id="t-next" aria-label="Next Testimonial">→</button>
+                </div>
+            </div>
+            
+            <div class="testimonial-track" id="testimonial-track">
+                <div class="t-card">
+                    <div class="t-header">
+                        <div class="t-profile">
+                            <div class="t-avatar">AL</div>
+                            <div class="t-info">
+                                <h5>Alex L.</h5>
+                                <span>CTO, Series B FinTech</span>
+                            </div>
+                        </div>
+                        <span style="color: var(--cyan); font-size: 1.2rem;">"</span>
+                    </div>
+                    <div class="t-body">
+                        "CFS CyberForgeSecurity found an authorization bypass in our payment flow that three previous 'big name' auditing firms completely missed during our annual assessments. It was a wake-up call for our engineering team. Utterly professional."
+                    </div>
+                </div>
+                
+                <div class="t-card">
+                    <div class="t-header">
+                        <div class="t-profile">
+                            <div class="t-avatar">MK</div>
+                            <div class="t-info">
+                                <h5>Marcus K.</h5>
+                                <span>VP Security, Healthcare SaaS</span>
+                            </div>
+                        </div>
+                        <span style="color: var(--cyan); font-size: 1.2rem;">"</span>
+                    </div>
+                    <div class="t-body">
+                        "I appreciate that they didn't hand me a 100-page PDF of false positives. They handed me a 12-page report detailing exactly how they chained three medium-risk logic bugs together to extract patient records. We won't use anyone else."
+                    </div>
+                </div>
+                
+                <div class="t-card">
+                    <div class="t-header">
+                        <div class="t-profile">
+                            <div class="t-avatar">SJ</div>
+                            <div class="t-info">
+                                <h5>Sarah J.</h5>
+                                <span>Director of Eng, Crypto Ex</span>
+                            </div>
+                        </div>
+                        <span style="color: var(--cyan); font-size: 1.2rem;">"</span>
+                    </div>
+                    <div class="t-body">
+                        "Working with them in a shared Slack channel during the white-box test was incredible. They were essentially live-mentoring my senior developers on secure coding practices while simultaneously finding flaws."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Client Form -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Our Engagement Team</h2>
+                <p>Tell us about your environment and we'll get back within 48 hours.</p>
+            </div>
+
+            <div class="contact-card">
+                <form id="contact-form">
+                    <div class="contact-grid">
+                        <div class="form-row">
+                            <label class="form-label" for="client-name">Full name</label>
+                            <input class="input" id="client-name" name="name" type="text" required placeholder="Jane Doe">
+                        </div>
+
+
+                        <div class="form-row">
+                            <label class="form-label" for="client-email">Email</label>
+                            <input class="input" id="client-email" name="email" type="email" required placeholder="you@example.com">
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="client-phone">Phone (optional)</label>
+                            <input class="input" id="client-phone" name="phone" type="tel" placeholder="+1 555 0100">
+                        </div>
+
+                        <div class="form-row" style="grid-column: 1 / -1;">
+                            <label class="form-label" for="client-message">Brief description of scope / objectives</label>
+                            <textarea class="textarea" id="client-message" name="message" placeholder="What assets, concerns, compliance or timeline should we know?" required></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="client-budget">Estimated budget</label>
+                            <select id="client-budget" name="budget" class="select">
+                                <option value="undisclosed">Undisclosed</option>
+                                <option value="$5k-$10k">$5k–$10k</option>
+                                <option value="$10k-$25k">$10k–$25k</option>
+                                <option value="$25k+">$25k+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="client-nda">NDA requested</label>
+                            <select id="client-nda" name="nda" class="select">
+                                <option value="no">No</option>
+                                <option value="yes">Yes — please send</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Send inquiry</button>
+                        <div class="form-note">Or message us on <a href="https://wa.me/4453076577" target="_blank" rel="noreferrer">WhatsApp +44 5307 6577</a></div>
+                    </div>
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-flex">
+                <div class="footer-logo">
+                <a href="#" class="logo" style="margin-bottom: 0.5rem;"><div class="logo-dot"></div> CFS CyberForgeSecurity</a>
+                <p style="font-size: 0.85rem; color: var(--text-dark);">Crafted in silence. Executed with precision.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#expertise">Services</a>
+                <a href="#firm">The Firm</a>
+                <a href="blog.html">Briefings</a>
+                <a href="mailto:hello@secureforge.tech">hello@secureforge.tech</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // 1. Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileClose = document.getElementById('mobile-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileToggle.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : '';
+        }
+
+        mobileToggle.addEventListener('click', toggleMenu);
+        if (mobileClose) mobileClose.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileOverlay.classList.contains('active')) toggleMenu();
+            });
+        });
+
+        // 2. Bento Grid Interactive Spotlight Border Glow
+        const bentoItems = document.querySelectorAll('.bento-item');
+        bentoItems.forEach(item => {
+            item.addEventListener('mousemove', e => {
+                const rect = item.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                item.style.setProperty('--mouse-x', `${x}px`);
+                item.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // 3. Parallax Floating Orbs on Mouse Move
+        document.addEventListener('mousemove', e => {
+            const orbs = document.querySelectorAll('.glow-orb');
+            const x = (e.clientX - window.innerWidth / 2) * 0.03;
+            const y = (e.clientY - window.innerHeight / 2) * 0.03;
+            
+            orbs.forEach((orb, index) => {
+                const factor = index === 0 ? 1 : -1;
+                orb.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+            });
+        });
+
+        // 4. Pricing / Scoping Calculator Logic
+        const targetSlider = document.getElementById('target-slider');
+        const targetCountDisplay = document.getElementById('target-count-display');
+        const calcPriceDisplay = document.getElementById('calc-price-display');
+        const calcDescDisplay = document.getElementById('calc-desc-display');
+        const calcFeaturesList = document.getElementById('calc-features-list');
+        const calcInquireBtn = document.getElementById('calc-inquire-btn');
+        const targetBtns = document.querySelectorAll('.target-btn[data-type], .target-btn[data-depth], .target-btn[data-addon]');
+
+        // Calculator Config Button Toggles
+        targetBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.dataset.type) {
+                    btn.classList.toggle('active');
+                } else if (btn.dataset.depth) {
+                    document.querySelectorAll('.target-btn[data-depth]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                } else if (btn.dataset.addon) {
+                    btn.classList.toggle('active');
+                }
+                calculateScope();
+            });
+        });
+
+        targetSlider.addEventListener('input', () => {
+            const val = targetSlider.value;
+            targetCountDisplay.textContent = val + (val == 1 ? ' Target' : ' Targets');
+            calculateScope();
+        });
+
+        function calculateScope() {
+            let basePrice = 5000;
+            let targetCount = parseInt(targetSlider.value);
+            
+            // Collect selected asset environments
+            const selectedTypes = [];
+            document.querySelectorAll('.target-btn[data-type].active').forEach(b => {
+                selectedTypes.push(b.dataset.type);
+            });
+
+            // If no types are selected, default to web-app to avoid $0 logic anomalies
+            if (selectedTypes.length === 0) {
+                basePrice += targetCount * 2500;
+            } else {
+                selectedTypes.forEach(type => {
+                    if (type === 'web-app') basePrice += targetCount * 3000;
+                    if (type === 'mobile') basePrice += targetCount * 4000;
+                    if (type === 'cloud') basePrice += 4000;
+                    if (type === 'network') basePrice += targetCount * 1500;
+                });
+            }
+
+            // Depth calculation
+            const depth = document.querySelector('.target-btn[data-depth].active').dataset.depth;
+            if (depth === 'white-box') {
+                basePrice += 3500; // Extra for code review
+            }
+
+            // Add-ons
+            let hasRedTeam = false;
+            let hasSlack = false;
+            document.querySelectorAll('.target-btn[data-addon].active').forEach(b => {
+                if (b.dataset.addon === 'red-team') {
+                    basePrice += 6000;
+                    hasRedTeam = true;
+                }
+                if (b.dataset.addon === 'slack') {
+                    basePrice += 1500;
+                    hasSlack = true;
+                }
+            });
+
+            // Display results
+            calcPriceDisplay.innerHTML = `$${basePrice.toLocaleString()} <span>/ estimated scope</span>`;
+            
+            // Dynamic description and features checklist
+            let desc = '';
+            let features = [];
+
+            if (basePrice < 10000) {
+                desc = 'Ideal for startups needing a foundational assessment to satisfy standard compliance checklists or initial vendor reviews.';
+                features = [
+                    `${targetCount} target asset${targetCount > 1 ? 's' : ''} tested for core security risks`,
+                    'Manual analysis of vulnerability vectors (OWASP Top 10)',
+                    'Comprehensive report detailing findings & remediation tips',
+                    '1 post-fix retest verification window'
+                ];
+            } else if (basePrice >= 10000 && basePrice < 20000) {
+                desc = 'Our standard deep manual assessment. Best suited for high-growth tech platforms with multi-role permissions and critical APIs.';
+                features = [
+                    `Detailed pentesting across ${targetCount} scoped target(s)`,
+                    depth === 'white-box' ? 'In-depth static & dynamic source code review' : 'Comprehensive perimeter and API security checks',
+                    'Business logic verification (hunting for complex logical bypasses)',
+                    hasSlack ? 'Direct Slack channel setup for direct dev discussions' : 'Technical brief with development leads',
+                    'Retesting of remediated vulnerabilities within 30 days'
+                ];
+            } else {
+                desc = 'Elite offensive security operations simulating sophisticated real-world adversaries across cloud, application, and people layers.';
+                features = [
+                    `Complex multi-layered threat scenario simulation`,
+                    hasRedTeam ? 'Targeted spear-phishing & active EDR bypass campaigns' : 'Bespoke hybrid white-box and infrastructure penetration testing',
+                    'Advanced privilege escalation threat modelling',
+                    hasSlack ? '24/7 Slack bridge directly with senior exploit developers' : 'Direct advisory updates for executive leadership',
+                    'Multiple post-fix retest cycles for iterative patch cycles'
+                ];
+            }
+
+            calcDescDisplay.textContent = desc;
+            calcFeaturesList.innerHTML = features.map(f => `<li>${f}</li>`).join('');
+
+            // Update email link subject & body
+            const subject = encodeURIComponent(`Custom Scope Scoping Inquiry: $${basePrice.toLocaleString()}`);
+            const body = encodeURIComponent(
+                `Hello CFS CyberForgeSecurity,\n\nWe would like to discuss a custom security engagement based on the following configurations:\n` +
+                `- Targets: ${targetCount}\n` +
+                `- Environments: ${selectedTypes.join(', ') || 'Web App'}\n` +
+                `- Depth: ${depth}\n` +
+                `- Red Teaming: ${hasRedTeam ? 'Yes' : 'No'}\n` +
+                `- Slack Integration: ${hasSlack ? 'Yes' : 'No'}\n` +
+                `- Estimated Budget: $${basePrice.toLocaleString()}\n\nPlease contact us to arrange a detailed scoping call.\n\nBest regards,\n`
+            );
+            calcInquireBtn.href = `mailto:hello@secureforge.tech?subject=${subject}&body=${body}`;
+        }
+
+        // Toggle scoping views
+        const btnShowCalc = document.getElementById('btn-show-calc');
+        const btnShowPlans = document.getElementById('btn-show-plans');
+        const calcContainer = document.getElementById('calculator-container');
+        const plansContainer = document.getElementById('plans-container');
+
+        btnShowCalc.addEventListener('click', () => {
+            btnShowCalc.classList.add('btn-glow');
+            btnShowCalc.style.borderColor = '';
+            btnShowCalc.style.color = '';
+            btnShowPlans.classList.remove('btn-glow');
+            btnShowPlans.style.borderColor = 'var(--border)';
+            btnShowPlans.style.color = 'var(--text-white)';
+            
+            calcContainer.style.display = 'grid';
+            plansContainer.style.display = 'none';
+        });
+
+        btnShowPlans.addEventListener('click', () => {
+            btnShowPlans.classList.add('btn-glow');
+            btnShowPlans.style.borderColor = '';
+            btnShowPlans.style.color = '';
+            btnShowCalc.classList.remove('btn-glow');
+            btnShowCalc.style.borderColor = 'var(--border)';
+            btnShowCalc.style.color = 'var(--text-white)';
+            
+            plansContainer.style.display = 'grid';
+            calcContainer.style.display = 'none';
+        });
+
+        // Initialize Calculator
+        calculateScope();
+
+        // 5. Testimonial Slider Controls
+        const track = document.getElementById('testimonial-track');
+        const prevBtn = document.getElementById('t-prev');
+        const nextBtn = document.getElementById('t-next');
+
+        if (track && prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const cardWidth = track.querySelector('.t-card').offsetWidth;
+                track.scrollBy({ left: cardWidth + 32, behavior: 'smooth' }); // card width + gap
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const cardWidth = track.querySelector('.t-card').offsetWidth;
+                track.scrollBy({ left: -(cardWidth + 32), behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            if (typeof emailjs === 'undefined') {
+                const status = document.getElementById('form-status');
+                if (status) {
+                    status.textContent = 'Email service unavailable. Please try again later or contact us on WhatsApp.';
+                    status.style.color = '#fda4af';
+                }
+                console.error('EmailJS library failed to load.');
+                return;
+            }
+            emailjs.init('wJ9uRbqOPk-nuIgzJ');
+
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('form-status');
+            if (!form || !status) return;
+
+            const serviceID = 'service_ilnr39o';
+            const templateID = 'template_m6ckajf';
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('client-name').value.trim();
+                const email = document.getElementById('client-email').value.trim();
+                const phone = document.getElementById('client-phone').value.trim();
+                const message = document.getElementById('client-message').value.trim();
+                const budget = document.getElementById('client-budget').value;
+                const nda = document.getElementById('client-nda').value;
+
+                if (!name || !email || !message) {
+                    status.textContent = 'Please complete the required fields: name, email, and message.';
+                    status.style.color = '#fda4af';
+                    return;
+                }
+
+                status.textContent = 'Sending inquiry…';
+                status.style.color = '#f8fafc';
+
+                const templateParams = {
+                    from_name: name,
+                    reply_to: email,
+                    email,
+                    phone,
+                    message,
+                    budget,
+                    nda,
+                    subject: `New inquiry from ${name}`
+                };
+
+                emailjs.send(serviceID, templateID, templateParams)
+                    .then(() => {
+                        status.textContent = 'Thank you! Your inquiry has been sent. We will reply within 24-48 hours.';
+                        status.style.color = '#22d3ee';
+                        form.reset();
+                    }, (error) => {
+                        console.error('EmailJS error:', error);
+                        status.textContent = 'Submission failed. Please try again or contact us on WhatsApp.';
+                        status.style.color = '#fda4af';
+                    });
+            });
+        })();
+    </script>
+</body>
+</html>

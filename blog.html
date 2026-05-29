@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Forensics & Case Briefings | CFS CyberForgeSecurity</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Declassified mobile forensics case files and incident briefings detailing advanced protocols breaches (SS7, MDM, BLE, NFC) analyzed by the CFS CyberForgeSecurity teams.">
+    <meta name="keywords" content="mobile forensics, security research, SS7 routing exploit, MDM hijack, juice jacking, NFC relay, Stingray IMSI catcher, cybersecurity case study">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://secureforge.tech/blog.html">
+    <meta property="og:title" content="Mobile Device Forensics & Case Briefings | CFS CyberForgeSecurity">
+    <meta property="og:description" content="Declassified incident briefings detailing advanced SIM swaps, MDM hijacks, BLE stacks overflow, and Stingray operations.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Centralized Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <nav>
+            <a href="index.html" class="logo"><div class="logo-dot"></div> CFS CyberForgeSecurity</a>
+            <a href="index.html" class="back-link">← Back to Firm</a>
+        </nav>
+
+        <div class="page-header">
+            <h1>Mobile Device Forensics</h1>
+            <p>Declassified briefings from our Incident Response & Threat Hunting teams regarding advanced mobile exploitation.</p>
+        </div>
+
+        <!-- Search and Filter Container -->
+        <div class="filter-container">
+            <div class="search-wrapper">
+                <input type="text" id="search-input" class="search-input" placeholder="Search case files by title, payload details, or protocol type...">
+                <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <div class="tag-filters">
+                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dark); margin-right: 0.5rem;">FILTER BY VECTOR:</span>
+                <button class="filter-btn active" data-tag="all">ALL DECLASSIFIED</button>
+                <button class="filter-btn" data-tag="telco">TELCO / SS7</button>
+                <button class="filter-btn" data-tag="mdm">MDM / SYSTEM</button>
+                <button class="filter-btn" data-tag="rf">RF / BLE / NFC</button>
+                <button class="filter-btn" data-tag="hardware">HARDWARE IMPLANT</button>
+                <button class="filter-btn" data-tag="software">SOFTWARE / MALWARE</button>
+            </div>
+        </div>
+
+        <!-- No Results Indicator -->
+        <div class="no-results" id="no-results-alert">
+            <h3>NO FILE MATCHES MATCHING SEARCH METRICS</h3>
+            <p>Refine your query parameters or reset tag filters to scan other sectors.</p>
+        </div>
+
+        <div class="briefings-grid" id="briefings-grid">
+            <!-- STORY 1 -->
+            <article data-category="telco">
+                <div class="article-meta"><span>CASE FILE 011</span> <span>SS7 PROTOCOL EXPLOIT</span></div>
+                <h2 class="article-title">The Phantom SIM Swap: Bypassing SMS 2FA Without Touching the Phone</h2>
+                <div class="article-content">
+                    <p>A high-net-worth crypto executive watched in real-time as $4.2M was drained from their exchange account. Their phone never lost cellular service, they never received an unexpected password reset link, and they still had physical possession of their device. They assumed the exchange had suffered an internal breach.</p>
+                    <p>Our investigation proved otherwise. By auditing the telco's signaling logs, we discovered the attackers didn't need to steal the client's SIM card physically. They exploited inherited flaws in the SS7 (Signaling System 7) protocol—the backbone of global telecom roaming. By purchasing access to a rogue SS7 node on the dark web, the attackers tricked the cellular network into believing the executive's phone was roaming in a foreign country.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>The network silently routed all incoming SMS messages containing the 2FA tokens directly to the attacker's server while the victim's phone remained idle. We mapped the rogue node's Global Title (GT) routing data, worked with international telecom authorities to blacklist the node, and migrated the executive board to hardware-backed U2F security keys (YubiKeys), permanently neutralizing SMS-based interception vectors.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 2 -->
+            <article data-category="mdm">
+                <div class="article-meta"><span>CASE FILE 019</span> <span>MDM HIJACKING</span></div>
+                <h2 class="article-title">The Trusted Dictator: Weaponizing the Company's Own MDM</h2>
+                <div class="article-content">
+                    <p>A Fortune 500 defense contractor noticed anomalous battery drain across the iPhones of five senior executives. Standard mobile anti-virus scans reported the devices were completely secure. The company restricted app installations strictly to an internal corporate store, supposedly eliminating malware risks.</p>
+                    <p>When our forensics team pulled the system diagnostic logs via Apple Configurator, we found the culprit hiding in plain sight. The enterprise's own Mobile Device Management (MDM) server had been quietly compromised months earlier via an unpatched web vulnerability. The attacker didn't need to break into the phones; the phones inherently trusted the MDM server implicitly.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>The attacker pushed a custom configuration profile that silently installed an invisible WebClip application. This WebClip possessed escalating sandbox privileges, allowing it to siphon GPS history and call logs to an offshore server. We severed the rogue MDM connection, forensically isolated the compromised server, and deployed a Zero Trust architecture that required multi-party cryptographic authorization for any MDM configuration changes.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 3 -->
+            <article data-category="rf">
+                <div class="article-meta"><span>CASE FILE 024</span> <span>BLUETOOTH LOW ENERGY</span></div>
+                <h2 class="article-title">Airborne Infection: Proximity Exploitation via BLE Handshake</h2>
+                <div class="article-content">
+                    <p>During a physical Red Team assessment for a major financial institution, our goal was to bridge the air gap from the public lobby into the secure internal network. Traditional Wi-Fi phishing (Evil Twin attacks) failed. The target was a heavily locked-down corporate Android tablet carried by floor managers.</p>
+                    <p>We developed a custom exploit targeting a known heap-overflow vulnerability within the Android Bluetooth Low Energy (BLE) stack. We concealed a Raspberry Pi inside a hollowed-out potted plant in the lobby. As managers walked past, the Pi initiated malformed BLE pairing requests.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>The malformed packets deliberately crashed the Bluetooth daemon, triggering a memory corruption flaw that allowed us to execute arbitrary code without the tablet ever displaying a pairing prompt. We achieved a root shell within seconds. In our debrief, we provided the client with the necessary kernel patches and helped them write strict SEAndroid policies to disable BLE broadcasting on hardened devices.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 4 -->
+            <article data-category="hardware">
+                <div class="article-meta"><span>CASE FILE 031</span> <span>HARDWARE IMPLANT</span></div>
+                <h2 class="article-title">The Poisoned Well: Juice Jacking at an Airport VIP Lounge</h2>
+                <div class="article-content">
+                    <p>A diplomat traveling between summits found their device exhibiting strange UI glitches. Upon returning, our forensics lab imaged the device. The logical file system showed that an unrecognized Developer Certificate had been trusted three days prior—coinciding perfectly with a layover in a private airport lounge.</p>
+                    <p>The client had used a complimentary USB charging kiosk. While they thought they were just pulling power, the kiosk was embedded with a hidden microcontroller. When the phone was plugged in, the kiosk aggressively negotiated a USB data connection, pretending to be a verified desktop computer.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>The hidden computer fired a rapid sequence of ADB (Android Debug Bridge) authorization bypasses, leveraging a zero-day flaw in the USB handling stack. It silently side-loaded a persistent monitoring daemon before switching back to normal charging mode. We extracted the daemon, reversed its telemetry targets, and issued the client cryptographic "USB Data Blockers" (sync-stops) to physically severe data pins on external chargers going forward.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 5 -->
+            <article data-category="software">
+                <div class="article-meta"><span>CASE FILE 042</span> <span>SUPPLY CHAIN COMPROMISE</span></div>
+                <h2 class="article-title">The Mirror Mirage: Subverting End-to-End Encrypted Apps</h2>
+                <div class="article-content">
+                    <p>An investigative journalist relying on a popular end-to-end encrypted messaging application realized their sources were being outed. They swore they had never shared their passcode and solely communicated via the encrypted app.</p>
+                    <p>During our code-level audit of the device, the encrypted messaging app checked out perfectly against its public GitHub repository—except for one crucial difference. The app hadn't been downloaded from the official Play Store. The journalist was targeted in a highly sophisticated Spear-Phishing campaign that tricked them into installing a "beta" update via a direct APK link.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>The APK was identical to the authentic app, with a single line of modified code in the cryptographic key-generation module. It was quietly BCC'ing the journalist's private Decryption Keys to an external server. The math/encryption was flawless—the attackers simply held a copy of the keys. We sanitized the device, trained the journalist on verifying APK signature hashes, and established verified out-of-band communication protocols.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 6 -->
+            <article data-category="rf">
+                <div class="article-meta"><span>CASE FILE 055</span> <span>NFC RELAY</span></div>
+                <h2 class="article-title">The Digital Pickpocket: Bypassing NFC Biometrics</h2>
+                <div class="article-content">
+                    <p>Physical security badges stored in Apple Wallet and Google Pay were supposedly un-cloneable. Yet, a server room in a high-security facility was accessed using the credentials of an engineer who was sitting at a coffee shop three miles away at the time of the breach.</p>
+                    <p>Our incident response team linked the breach to an advanced NFC relay attack. The attackers worked in pairs. Operative A sat directly behind the engineer at the coffee shop with a concealed high-powered NFC reader in their backpack. Operative B stood at the server room door with an NFC emulator.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>When Operative B tapped their emulator to the server room reader, the cryptographic challenge was relayed instantly over the internet to Operative A's backpack, which queried the engineer's phone in their pocket. The phone calculated the correct response and sent it back, granting entry without duplicating the actual cryptographic token. We remediated the issue by forcing the facility's readers to require biometric confirmation (FaceID/TouchID) for NFC transmission, completely killing passive relay attacks.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 7 -->
+            <article data-category="software">
+                <div class="article-meta"><span>CASE FILE 063</span> <span>OVERLAY ATTACK</span></div>
+                <h2 class="article-title">The Weather App Trojan: Dalvik Executable Injection</h2>
+                <div class="article-content">
+                    <p>A regional bank saw a sudden spike in unauthorized wire transfers originating from perfectly valid, multifactor-authenticated mobile sessions. The common denominator? All victims had recently installed a popular, highly-rated local weather application.</p>
+                    <p>We reverse-engineered the weather app. When vetted by the App Store automated scanners, the app was entirely benign. However, 48 hours after installation, the app reached out to a remote server and fetched a secondary ".dex" (Dalvik Executable) file. It loaded this code dynamically into its own memory space, bypassing all App Store static analyses.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>This dynamic payload monitored the Android Activity Manager. When the user opened their banking app, the weather app instantly drew a pixel-perfect, invisible overlay screen on top of it. It logged the keystrokes (passwords) and intercepted the SMS 2FA codes. We tracked the dynamic payload's C2 server, initiated an immediate takedown through international hosting registrars, and provided the bank with behavioral heuristics to detect overlay manipulations in their app updates.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- STORY 8 -->
+            <article data-category="telco rf">
+                <div class="article-meta"><span>CASE FILE 078</span> <span>IMSI CATCHER</span></div>
+                <h2 class="article-title">The Downgrade Dilemma: Intercepting VoLTE with a Stingray</h2>
+                <div class="article-content">
+                    <p>A diplomatic envoy realized their "secure" cellular calls were being transcribed and leaked to the press. They were using modern 5G devices equipped with VoLTE (Voice over LTE), which utilizes strong built-in encryption that historically resists passive eavesdropping.</p>
+                    <p>Our Physical Security team swept the embassy perimeter with spectrum analyzers. We discovered a hostile IMSI Catcher (often called a Stingray) mounted in a van two blocks away. The Stingray was broadcasting a signal slightly stronger than the legitimate cell tower, but it wasn't a 5G signal.</p>
+                    <div class="resolution-box">
+                        <h4>The Resolution</h4>
+                        <p>The rogue tower exploited a cellular protocol feature: backward compatibility. It broadcasted a jamming signal on the 4G/5G bands, forcing the diplomats' phones to seamlessly downgrade to the archaic 2G (GSM) protocol to maintain a connection. 2G lacks mutual authentication and uses deprecated encryption, allowing the Stingray to decrypt the calls in real-time. We remediated this by hardcoding the executive devices via the hidden modem menus to outright reject 2G/3G connections, preferring dropped calls over compromised lines.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+            <footer>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> CFS CyberForgeSecurity. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Active Filter Controller -->
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articles = document.querySelectorAll('article');
+        const noResults = document.getElementById('no-results-alert');
+
+        let activeTag = 'all';
+        let searchQuery = '';
+
+        // Search Input Changes
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            filterArticles();
+        });
+
+        // Filter Tag Selections
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeTag = btn.dataset.tag;
+                filterArticles();
+            });
+        });
+
+        function filterArticles() {
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const title = article.querySelector('.article-title').textContent.toLowerCase();
+                const content = article.querySelector('.article-content').textContent.toLowerCase();
+                const meta = article.querySelector('.article-meta').textContent.toLowerCase();
+                const categories = article.dataset.category.split(' ');
+
+                const matchesSearch = title.includes(searchQuery) || content.includes(searchQuery) || meta.includes(searchQuery);
+                const matchesTag = activeTag === 'all' || categories.includes(activeTag);
+
+                if (matchesSearch && matchesTag) {
+                    article.style.display = 'block';
+                    article.style.opacity = '1';
+                    visibleCount++;
+                } else {
+                    article.style.display = 'none';
+                    article.style.opacity = '0';
+                }
+            });
+
+            // Toggle No Results State
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
